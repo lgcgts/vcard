@@ -67,6 +67,8 @@
    <script>
     const basePath = window.location.pathname.split('/').slice(0, -2).join('/');
     document.write(`<script src="${basePath}/data.js"><\/script>`);
+    document.getElementById("profileImg").src = basePath + "/profile.jpg";
+
   </script>
 
 
