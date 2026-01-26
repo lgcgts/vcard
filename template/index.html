@@ -64,7 +64,11 @@
   </div>
 
   <!-- Load contact data -->
-  <script src="data.js"></script>
+   <script>
+    const basePath = window.location.pathname.split('/').slice(0, -2).join('/');
+    document.write(`<script src="${basePath}/data.js"><\/script>`);
+  </script>
+
 
   <!-- Inject data -->
   <script>
