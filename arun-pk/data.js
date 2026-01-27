@@ -10,5 +10,9 @@ emailWork:"arun@aprinfra.org",
 emailPersonal:"arunidinfo@gmail.com",
 locationText:"Kainatty, Kalpetta, Wayanad",
 locationUrl:"https://maps.google.com?q=Kainatty,Kalpetta,Wayanad,Kerala",
-website:"https://share.google/owFnS9MPe6s68ZuBP"
+website: {
+  url: "https://share.google/owFnS9MPe6s68ZuBP",
+  label: "Google Business Profile"
+},
+
 };
