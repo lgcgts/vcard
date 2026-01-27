@@ -30,11 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
     profile.locationText;
 
   if (profile.website) {
-    document.getElementById("websiteBtn").href = profile.website;
+    document.getElementById("websiteBtn").href = profile.website.url;
     document.getElementById("websiteText").textContent =
-      profile.website.replace(/^https?:\/\//, "");
+      profile.website.label || profile.website.url.replace(/^https?:\/\//, "");
   } else {
     document.getElementById("websiteBtn").style.display = "none";
   }
+
 
 });
