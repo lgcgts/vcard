@@ -13,3 +13,7 @@ document.getElementById("personalEmailBtn").href = "mailto:" + profile.emailPers
 document.getElementById("personalEmailText").textContent = profile.emailPersonal;
 document.getElementById("locationBtn").href = profile.locationUrl;
 document.getElementById("locationText").textContent = profile.locationText;
+document.getElementById("websiteBtn").href = profile.website;
+document.getElementById("websiteText").textContent =
+  profile.website.replace("https://", "").replace("http://", "");
+
