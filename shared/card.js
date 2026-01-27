@@ -29,13 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("locationText").textContent =
     profile.locationText;
 
-  if (profile.website) {
+  if (profile.website && profile.website.url) {
     document.getElementById("websiteBtn").href = profile.website.url;
+  
     document.getElementById("websiteText").textContent =
-      profile.website.label || profile.website.url.replace(/^https?:\/\//, "");
+      profile.website.label ||
+      profile.website.url.replace(/^https?:\/\//, "");
   } else {
     document.getElementById("websiteBtn").style.display = "none";
   }
+
 
 
 });
