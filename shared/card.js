@@ -15,5 +15,5 @@ document.getElementById("locationBtn").href = profile.locationUrl;
 document.getElementById("locationText").textContent = profile.locationText;
 document.getElementById("websiteBtn").href = profile.website;
 document.getElementById("websiteText").textContent =
-  profile.website.replace("https://", "").replace("http://", "");
+profile.website.replace("https://", "").replace("http://", "");
 
