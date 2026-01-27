@@ -36,6 +36,17 @@ padding:14px 16px;border-radius:12px;margin-bottom:12px;
 .whatsapp{background:var(--whatsapp);color:#fff}
 .neutral{background:#f9fafb;border:1px solid var(--border);color:var(--text)}
 .btn-title{font-size:15px;font-weight:600}
-.btn-sub{font-size:13px;opacity:.85;margin-top:4px}
+.btn-sub{
+  font-size:16px;        /* was 13px */
+  font-weight:600;       /* make values stand out */
+  color:#111827;         /* darker for readability */
+  margin-top:4px;
+}
 .note{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
 .footer{margin-top:22px;text-align:center;font-size:12px;color:var(--muted)}
+.phone-highlight{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+
