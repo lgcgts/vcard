@@ -1,47 +1,56 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const setText = (id, value) => {
+    const el = document.getElementById(id);
+    if (el && value !== undefined && value !== null) {
+      el.textContent = value;
+    }
+  };
 
-  document.title = profile.name + " | Digital Card";
+  const bindAction = (anchorId, href, textEntries = []) => {
+    const anchor = document.getElementById(anchorId);
+    if (!anchor) return;
+    if (!href) {
+      anchor.style.display = "none";
+      return;
+    }
+    anchor.href = href;
+    textEntries.forEach(([id, value, useHtml]) => {
+      const node = document.getElementById(id);
+      if (!node || value === undefined || value === null) return;
+      if (useHtml) node.innerHTML = value; else node.textContent = value;
+    });
+  };
 
-  document.getElementById("name").textContent = profile.name;
-  document.getElementById("designation").textContent = profile.title;
-  document.getElementById("company").textContent = profile.company;
+  document.title = `${profile.name} | Digital Card`;
 
+  setText("name", profile.name);
+  setText("designation", profile.title);
+  setText("company", profile.company);
   document.getElementById("profileImg").src = "profile.jpg";
 
-  document.getElementById("callBtn").href = "tel:" + profile.phone;
-  document.getElementById("phoneText").textContent = profile.displayPhone;
+  bindAction("callBtn", profile.phone && `tel:${profile.phone}`, [["phoneText", profile.displayPhone]]);
+  bindAction("whatsappBtn", profile.whatsapp && `https://wa.me/${profile.whatsapp}`);
+  bindAction("workEmailBtn", profile.emailWork && `mailto:${profile.emailWork}`, [["workEmailText", profile.emailWork]]);
+  bindAction("personalEmailBtn", profile.emailPersonal && `mailto:${profile.emailPersonal}`, [["personalEmailText", profile.emailPersonal]]);
 
-  document.getElementById("whatsappBtn").href =
-    "https://wa.me/" + profile.whatsapp;
+  bindAction(
+    "addressBtn",
+    profile.locationUrl || "#",
+    [["addressText", profile.address && profile.address.replace(/\n/g, "<br>"), true]]
+  );
 
-  document.getElementById("workEmailBtn").href =
-    "mailto:" + profile.emailWork;
-  document.getElementById("workEmailText").textContent =
-    profile.emailWork;
-
-  document.getElementById("personalEmailBtn").href =
-    "mailto:" + profile.emailPersonal;
-  document.getElementById("personalEmailText").textContent =
-    profile.emailPersonal;
-
-  document.getElementById("locationBtn").href =
-    profile.locationUrl;
-  document.getElementById("locationText").textContent =
-    profile.locationText;
-
-  const websiteBtn = document.getElementById("websiteBtn");
-  const websiteText = document.getElementById("websiteText");
-  
-  if (profile.website && profile.website.url) {
-    websiteBtn.href = profile.website.url;
-    websiteText.textContent =
-      profile.website.label ||
-      profile.website.url.replace(/^https?:\/\//, "");
+  const businessLabel = (profile.website && profile.website.label) || "My Business";
+  if (profile.locationUrl) {
+    const locationLabel = profile.locationText || profile.locationUrl;
+    bindAction("websiteBtn", profile.locationUrl, [["websiteText", `${businessLabel} • ${locationLabel}`]]);
+  } else if (profile.website && profile.website.url) {
+    bindAction(
+      "websiteBtn",
+      profile.website.url,
+      [["websiteText", profile.website.label || profile.website.url.replace(/^https?:\/\//, "")]]
+    );
   } else {
-    websiteBtn.style.display = "none";
+    const websiteBtn = document.getElementById("websiteBtn");
+    if (websiteBtn) websiteBtn.style.display = "none";
   }
-  
-  
-
-
 });

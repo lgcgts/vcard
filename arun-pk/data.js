@@ -15,6 +15,8 @@ const profile = {
     label: "Travel Agent"
   },
 
-  locationText: "Kainatty, Kalpetta, Wayanad",
-  locationUrl: "https://maps.google.com?q=Kainatty,Kalpetta,Wayanad"
+  address: "Kainatty, Kalpetta - 673121\nWayanad Kerala",
+
+  locationText: "Book.inwynd \n Sulthan Bathery, Wayanad",
+  locationUrl: "https://share.google/5s9zi3fB5hGObHXR5"
 };

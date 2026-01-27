@@ -18,6 +18,7 @@ body{
   font-family:'Inter',system-ui,-apple-system;
   background:linear-gradient(180deg,#eef1f6,#f8fafc);
   color:var(--text);
+  line-height:1.5;
 }
 
 .card{
@@ -27,9 +28,10 @@ body{
   border-radius:24px;
   padding:26px 22px;
   box-shadow:0 12px 30px rgba(0,0,0,.08);
+  border:1px solid var(--border);
 }
 
-.header{text-align:center;margin-bottom:22px}
+.header{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;margin-bottom:22px}
 
 /* Brand */
 .brand-bar{
@@ -71,6 +73,8 @@ body{
   padding:14px 16px;
   border-radius:14px;
   margin-bottom:12px;
+  transition:transform .15s ease,box-shadow .15s ease,background-color .15s ease,border-color .15s ease;
+  box-shadow:0 8px 18px rgba(0,0,0,.04);
 }
 
 .icon{
@@ -86,21 +90,50 @@ body{
 .whatsapp{background:#25D366;color:#fff}
 .neutral{background:#f9fafb;border:1px solid var(--border);color:var(--text)}
 
-.btn-text{display:flex;flex-direction:column}
-.btn-title{font-size:15px;font-weight:600}
-.btn-sub{font-size:16px;font-weight:600;margin-top:2px}
-.phone-highlight{font-size:18px;font-weight:700}
+.actions a.primary:hover,.actions a.primary:focus-visible{background:#0c74df;box-shadow:0 10px 22px rgba(10,102,194,.25);transform:translateY(-1px)}
+.actions a.whatsapp:hover,.actions a.whatsapp:focus-visible{background:#28de6b;box-shadow:0 10px 22px rgba(37,211,102,.25);transform:translateY(-1px)}
+.actions a.neutral:hover,.actions a.neutral:focus-visible{background:#fff;border-color:#dfe4ec;box-shadow:0 10px 22px rgba(0,0,0,.05);transform:translateY(-1px)}
+.actions a:focus-visible{outline:3px solid rgba(10,102,194,.18);outline-offset:2px}
 
-.note{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+.btn-text{display:flex;flex-direction:column;gap:2px;flex:1}
+.btn-title{font-size:15px;font-weight:600}
+.btn-sub{font-size:15px;font-weight:600;margin-top:2px;color:var(--muted)}
+.phone-highlight{font-size:18px;font-weight:700;color:inherit}
+.actions a.primary .btn-sub,.actions a.whatsapp .btn-sub{color:rgba(255,255,255,.92)}
+
+.note{font-size:12px;color:var(--muted);text-align:center;margin-top:14px;padding:10px 12px;border:1px dashed var(--border);border-radius:12px;background:#f9fafb}
 .footer{margin-top:18px;text-align:center;font-size:12px;color:var(--muted)}
 
+.website-card{margin-top:6px}
+.website-card.neutral{background:#f7faff;border-color:#d7e3f7;box-shadow:0 12px 28px rgba(10,102,194,.08)}
 .website-card .icon{
-  background:#eef2f7;
+  background:#fff;
+  width:108px;
+  height:108px;
+  border-radius:20px;
+  padding:14px;
+  border:1px solid var(--border);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
+.actions .website-card{align-items:flex-start}
+.website-card .btn-text{gap:6px}
+
 .website-logo img{
-  width:60px;
-  height:60px;
+  width:82px;
+  height:82px;
   object-fit:contain;
+  filter:drop-shadow(0 3px 8px rgba(0,0,0,.08));
+}
+
+.website-text{display:flex;flex-direction:row;gap:8px;flex-wrap:wrap;align-items:center}
+.business-label{font-size:15px;font-weight:700;color:#0a2540}
+.location-label{font-size:13px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px}
+.location-url{font-size:14px;font-weight:700;color:var(--primary);word-break:break-word}
+
+@media (max-width:480px){
+  body{padding:22px 12px}
+  .card{padding:22px 18px}
+  .actions a{padding:12px 14px}
 }
 
