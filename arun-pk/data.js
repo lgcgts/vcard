@@ -9,5 +9,6 @@ whatsapp:"917356455578",
 emailWork:"arun@aprinfra.org",
 emailPersonal:"arunidinfo@gmail.com",
 locationText:"Kainatty, Kalpetta, Wayanad",
-locationUrl:"https://maps.google.com?q=Kainatty,Kalpetta,Wayanad,Kerala"
+locationUrl:"https://maps.google.com?q=Kainatty,Kalpetta,Wayanad,Kerala",
+website:"https://share.google/owFnS9MPe6s68ZuBP"
 };
