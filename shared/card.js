@@ -11,16 +11,23 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("callBtn").href = "tel:" + profile.phone;
   document.getElementById("phoneText").textContent = profile.displayPhone;
 
-  document.getElementById("whatsappBtn").href = "https://wa.me/" + profile.whatsapp;
+  document.getElementById("whatsappBtn").href =
+    "https://wa.me/" + profile.whatsapp;
 
-  document.getElementById("workEmailBtn").href = "mailto:" + profile.emailWork;
-  document.getElementById("workEmailText").textContent = profile.emailWork;
+  document.getElementById("workEmailBtn").href =
+    "mailto:" + profile.emailWork;
+  document.getElementById("workEmailText").textContent =
+    profile.emailWork;
 
-  document.getElementById("personalEmailBtn").href = "mailto:" + profile.emailPersonal;
-  document.getElementById("personalEmailText").textContent = profile.emailPersonal;
+  document.getElementById("personalEmailBtn").href =
+    "mailto:" + profile.emailPersonal;
+  document.getElementById("personalEmailText").textContent =
+    profile.emailPersonal;
 
-  document.getElementById("locationBtn").href = profile.locationUrl;
-  document.getElementById("locationText").textContent = profile.locationText;
+  document.getElementById("locationBtn").href =
+    profile.locationUrl;
+  document.getElementById("locationText").textContent =
+    profile.locationText;
 
   if (profile.website) {
     document.getElementById("websiteBtn").href = profile.website;
