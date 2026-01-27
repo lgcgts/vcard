@@ -12,7 +12,7 @@ const profile = {
 
   website: {
     url: "https://share.google/owFnS9MPe6s68ZuBP",
-    label: "My Business · Travel Agent"
+    label: "Travel Agent"
   },
 
   locationText: "Kainatty, Kalpetta, Wayanad",
