@@ -1,12 +1,12 @@
 BEGIN:VCARD
 VERSION:3.0
-N:P.K;Arun;;;
-FN:Arun P.K
-ORG:Stone Lodge’s;APR Group Of Companies
-TITLE:Operations Manager
-TEL;TYPE=CELL:+917356455578
-EMAIL;TYPE=INTERNET:arunidinfo@gmail.com
-EMAIL;TYPE=INTERNET:arun@aprinfra.org
-ADR;TYPE=WORK:;;Kainatty, Kalpetta - 673121;Wayanad;Kerala;;India
-URL:https://wa.me/917356455578
+N:Mathew;Thomas;;;
+FN:Thomas Mathew
+ORG:ABC Hardwares
+TITLE:Manager
+TEL;TYPE=CELL:+919847050485
+EMAIL;TYPE=WORK,INTERNET:abcbathery@gmail.com
+EMAIL;TYPE=HOME,INTERNET:thomas.mathew@gmail.com
+ADR;TYPE=WORK:;;Sulthan Bathery, Kalpetta, Mananthavady;Wayanad;;;
+URL:https://sites.google.com/view/abchardware/home
 END:VCARD
