@@ -1,6 +1,6 @@
 const profile = {
   name: "Thomas Mathew",
-  title: "Manager",
+  title: "Managing Partner",
   company: "ABC Hardwares",
 
   phone: "+919847050485",
