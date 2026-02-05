@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Visiting Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../shared/style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="header">
+
+    <!-- Brand (subtle) --> 
+    <!--
+    <div class="brand-bar">
+      <img src="logo.png" class="logo" alt="Company Logo"
+           onerror="this.style.display='none'">
+    </div>
+    -->
+    <!-- Person (hero) -->
+    <img id="profileImg" class="avatar" alt="Profile Photo">
+
+    <div class="name" id="name"></div>
+    <div class="designation" id="designation"></div>
+    <div class="company" id="company"></div>
+
+  </div>
+
+  <div class="actions">
+
+    <a class="primary" id="callBtn">
+      <div class="icon">📞</div>
+      <div class="btn-text">
+        <div class="btn-title">Call</div>
+        <div class="btn-sub phone-highlight" id="phoneText"></div>
+      </div>
+    </a>
+
+    <a class="whatsapp" id="whatsappBtn">
+      <div class="icon">💬</div>
+      <div class="btn-text">
+        <div class="btn-title">WhatsApp</div>
+        <div class="btn-sub">Chat instantly</div>
+      </div>
+    </a>
+
+    <a class="neutral" id="workEmailBtn">
+      <div class="icon">✉️</div>
+      <div class="btn-text">
+        <div class="btn-title">Work Email</div>
+        <div class="btn-sub" id="workEmailText"></div>
+      </div>
+    </a>
+
+    <a class="neutral" id="personalEmailBtn">
+      <div class="icon">📧</div>
+      <div class="btn-text">
+        <div class="btn-title">Personal Email</div>
+        <div class="btn-sub" id="personalEmailText"></div>
+      </div>
+    </a>
+
+    <a class="neutral" href="contact.vcf">
+      <div class="icon">💾</div>
+      <div class="btn-text">
+        <div class="btn-title">Save Contact</div>
+        <div class="btn-sub">Add to phone contacts</div>
+      </div>
+    </a>
+
+    <a class="neutral" id="addressBtn">
+      <div class="icon">🏢</div>
+      <div class="btn-text">
+        <div class="btn-title">Address</div>
+        <div class="btn-sub" id="addressText"></div>
+      </div>
+    </a>
+
+    <a class="neutral website-card" id="websiteBtn">
+      <div class="icon website-logo">
+        <img src="logo.png" alt="Business Logo"
+             onerror="this.style.display='none'">
+      </div>
+      <div class="btn-text">
+        <div class="btn-title">My Business</div>
+        <div class="btn-sub website-text" id="websiteText"></div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="note">
+    Tip: on Android, open the downloaded VCF to save the contact.
+  </div>
+
+  <div class="footer">
+    Digital Visiting Card powered by <a class="footer-link" href="https://api.whatsapp.com/send/?phone=918848413826&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">LogicGates</a>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="../shared/card.js"></script>
+
+</body>
+</html>
