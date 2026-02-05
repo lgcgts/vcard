@@ -7,16 +7,16 @@ const profile = {
   displayPhone: "+919847050485",
   whatsapp: "919847050485",
 
-  emailWork: "thomas.mathew@gmail.com",
-  emailPersonal: "arunidinfo@gmail.com",
+  emailWork: "abcbathery@gmail.com",
+  emailPersonal: "thomas.mathew@gmail.com",
 
   website: {
     url: "https://sites.google.com/view/abchardware/home",
     label: "ABC Hardwares"
   },
 
-  address: "Sulthan Bathery, Kalpetta, Mananthavady",
+  address: "Kalpetta, Wayanad - 673121\nKerala, India",
 
-  locationText: "\nSulthan Bathery, Kalpetta,",
+  locationText: "\nSulthan Bathery, Kalpetta, Mananthavady",
   locationUrl: "https://maps.app.goo.gl/7FFwqChduaWfTgEV6"
 };
