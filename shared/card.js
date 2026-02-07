@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  const showAnchor = (el) => {
+    if (!el) return;
+    el.style.display = "flex";
+  };
+
+  const telHref = (number) => {
+    const value = (number || "").toString().trim();
+    if (!value) return null;
+    if (value.startsWith("+")) return `tel:${value}`;
+    if (/^\d+$/.test(value)) return `tel:+${value}`; // assume number includes country code digits; add leading +
+    return `tel:${value}`;
+  };
+
   const bindAction = (anchorId, href, textEntries = []) => {
     const anchor = document.getElementById(anchorId);
     if (!anchor) return;
@@ -13,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
       anchor.style.display = "none";
       return;
     }
+    showAnchor(anchor);
     anchor.href = href;
     textEntries.forEach(([id, value, useHtml]) => {
       const node = document.getElementById(id);
@@ -28,7 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
   setText("company", profile.company);
   document.getElementById("profileImg").src = "profile.jpg";
 
-  bindAction("callBtn", profile.phone && `tel:${profile.phone}`, [["phoneText", profile.displayPhone]]);
+  bindAction("callBtn", telHref(profile.phone), [["phoneText", profile.displayPhone]]);
+  bindAction(
+    "workPhoneBtn",
+    telHref(profile.workPhone),
+    [["workPhoneText", profile.displayWorkPhone || profile.workPhone]]
+  );
   bindAction("whatsappBtn", profile.whatsapp && `https://wa.me/${profile.whatsapp}`);
   bindAction("workEmailBtn", profile.emailWork && `mailto:${profile.emailWork}`, [["workEmailText", profile.emailWork]]);
   bindAction("personalEmailBtn", profile.emailPersonal && `mailto:${profile.emailPersonal}`, [["personalEmailText", profile.emailPersonal]]);
